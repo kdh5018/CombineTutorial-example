@@ -13,6 +13,12 @@
 		764D88132A6F90D800A084A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764D88112A6F90D800A084A5 /* Main.storyboard */; };
 		764D88152A6F90D900A084A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764D88142A6F90D900A084A5 /* Assets.xcassets */; };
 		764D88182A6F90D900A084A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764D88162A6F90D900A084A5 /* LaunchScreen.storyboard */; };
+		764D88212A6F912E00A084A5 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 764D88202A6F912E00A084A5 /* CombineCocoa */; };
+		764D88232A6F919200A084A5 /* Numbers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764D88222A6F919200A084A5 /* Numbers.storyboard */; };
+		764D88252A6F920000A084A5 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D88242A6F920000A084A5 /* NumbersViewController.swift */; };
+		764D88272A6F99BB00A084A5 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D88262A6F99BB00A084A5 /* UIViewController+Ext.swift */; };
+		764D88292A6FAC7200A084A5 /* NumbersSwiftUIContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D88282A6FAC7200A084A5 /* NumbersSwiftUIContainerVC.swift */; };
+		764D882B2A6FB24200A084A5 /* NumbersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D882A2A6FB24200A084A5 /* NumbersVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,11 @@
 		764D88142A6F90D900A084A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		764D88172A6F90D900A084A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		764D88192A6F90D900A084A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		764D88222A6F919200A084A5 /* Numbers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Numbers.storyboard; sourceTree = "<group>"; };
+		764D88242A6F920000A084A5 /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
+		764D88262A6F99BB00A084A5 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		764D88282A6FAC7200A084A5 /* NumbersSwiftUIContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersSwiftUIContainerVC.swift; sourceTree = "<group>"; };
+		764D882A2A6FB24200A084A5 /* NumbersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764D88212A6F912E00A084A5 /* CombineCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +73,13 @@
 				764D880F2A6F90D800A084A5 /* ViewController.swift */,
 				764D88112A6F90D800A084A5 /* Main.storyboard */,
 				764D88142A6F90D900A084A5 /* Assets.xcassets */,
-				764D88162A6F90D900A084A5 /* LaunchScreen.storyboard */,
 				764D88192A6F90D900A084A5 /* Info.plist */,
+				764D88222A6F919200A084A5 /* Numbers.storyboard */,
+				764D88162A6F90D900A084A5 /* LaunchScreen.storyboard */,
+				764D88242A6F920000A084A5 /* NumbersViewController.swift */,
+				764D88262A6F99BB00A084A5 /* UIViewController+Ext.swift */,
+				764D88282A6FAC7200A084A5 /* NumbersSwiftUIContainerVC.swift */,
+				764D882A2A6FB24200A084A5 /* NumbersVM.swift */,
 			);
 			path = "CombineTutorial-example";
 			sourceTree = "<group>";
@@ -83,6 +100,9 @@
 			dependencies = (
 			);
 			name = "CombineTutorial-example";
+			packageProductDependencies = (
+				764D88202A6F912E00A084A5 /* CombineCocoa */,
+			);
 			productName = "CombineTutorial-example";
 			productReference = 764D88082A6F90D800A084A5 /* CombineTutorial-example.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 764D87FF2A6F90D800A084A5;
+			packageReferences = (
+				764D881F2A6F912E00A084A5 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+			);
 			productRefGroup = 764D88092A6F90D800A084A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				764D88182A6F90D900A084A5 /* LaunchScreen.storyboard in Resources */,
+				764D88232A6F919200A084A5 /* Numbers.storyboard in Resources */,
 				764D88152A6F90D900A084A5 /* Assets.xcassets in Resources */,
 				764D88132A6F90D800A084A5 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				764D88102A6F90D800A084A5 /* ViewController.swift in Sources */,
+				764D88292A6FAC7200A084A5 /* NumbersSwiftUIContainerVC.swift in Sources */,
+				764D88252A6F920000A084A5 /* NumbersViewController.swift in Sources */,
+				764D882B2A6FB24200A084A5 /* NumbersVM.swift in Sources */,
+				764D88272A6F99BB00A084A5 /* UIViewController+Ext.swift in Sources */,
 				764D880C2A6F90D800A084A5 /* AppDelegate.swift in Sources */,
 				764D880E2A6F90D800A084A5 /* SceneDelegate.swift in Sources */,
 			);
@@ -356,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		764D881F2A6F912E00A084A5 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		764D88202A6F912E00A084A5 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 764D881F2A6F912E00A084A5 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 764D88002A6F90D800A084A5 /* Project object */;
 }
