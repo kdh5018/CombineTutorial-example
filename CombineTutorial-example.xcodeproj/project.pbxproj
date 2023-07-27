@@ -19,6 +19,9 @@
 		764D88272A6F99BB00A084A5 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D88262A6F99BB00A084A5 /* UIViewController+Ext.swift */; };
 		764D88292A6FAC7200A084A5 /* NumbersSwiftUIContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D88282A6FAC7200A084A5 /* NumbersSwiftUIContainerVC.swift */; };
 		764D882B2A6FB24200A084A5 /* NumbersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D882A2A6FB24200A084A5 /* NumbersVM.swift */; };
+		76F6E9C92A72928700EADE99 /* Validation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F6E9C82A72928700EADE99 /* Validation.storyboard */; };
+		76F6E9CB2A72930B00EADE99 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6E9CA2A72930B00EADE99 /* ValidationViewController.swift */; };
+		76F6E9CF2A729E4400EADE99 /* ValidationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6E9CE2A729E4400EADE99 /* ValidationVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		764D88262A6F99BB00A084A5 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		764D88282A6FAC7200A084A5 /* NumbersSwiftUIContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersSwiftUIContainerVC.swift; sourceTree = "<group>"; };
 		764D882A2A6FB24200A084A5 /* NumbersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersVM.swift; sourceTree = "<group>"; };
+		76F6E9C82A72928700EADE99 /* Validation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Validation.storyboard; sourceTree = "<group>"; };
+		76F6E9CA2A72930B00EADE99 /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
+		76F6E9CE2A729E4400EADE99 /* ValidationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,16 +78,35 @@
 				764D880D2A6F90D800A084A5 /* SceneDelegate.swift */,
 				764D880F2A6F90D800A084A5 /* ViewController.swift */,
 				764D88112A6F90D800A084A5 /* Main.storyboard */,
+				764D88162A6F90D900A084A5 /* LaunchScreen.storyboard */,
 				764D88142A6F90D900A084A5 /* Assets.xcassets */,
 				764D88192A6F90D900A084A5 /* Info.plist */,
-				764D88222A6F919200A084A5 /* Numbers.storyboard */,
-				764D88162A6F90D900A084A5 /* LaunchScreen.storyboard */,
-				764D88242A6F920000A084A5 /* NumbersViewController.swift */,
 				764D88262A6F99BB00A084A5 /* UIViewController+Ext.swift */,
-				764D88282A6FAC7200A084A5 /* NumbersSwiftUIContainerVC.swift */,
-				764D882A2A6FB24200A084A5 /* NumbersVM.swift */,
+				7661C6DD2A70E8C500101B8C /* Adding Numbers */,
+				7661C6DE2A70E8FA00101B8C /* Simple Validation */,
 			);
 			path = "CombineTutorial-example";
+			sourceTree = "<group>";
+		};
+		7661C6DD2A70E8C500101B8C /* Adding Numbers */ = {
+			isa = PBXGroup;
+			children = (
+				764D88222A6F919200A084A5 /* Numbers.storyboard */,
+				764D88282A6FAC7200A084A5 /* NumbersSwiftUIContainerVC.swift */,
+				764D88242A6F920000A084A5 /* NumbersViewController.swift */,
+				764D882A2A6FB24200A084A5 /* NumbersVM.swift */,
+			);
+			path = "Adding Numbers";
+			sourceTree = "<group>";
+		};
+		7661C6DE2A70E8FA00101B8C /* Simple Validation */ = {
+			isa = PBXGroup;
+			children = (
+				76F6E9C82A72928700EADE99 /* Validation.storyboard */,
+				76F6E9CA2A72930B00EADE99 /* ValidationViewController.swift */,
+				76F6E9CE2A729E4400EADE99 /* ValidationVM.swift */,
+			);
+			path = "Simple Validation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +176,7 @@
 				764D88182A6F90D900A084A5 /* LaunchScreen.storyboard in Resources */,
 				764D88232A6F919200A084A5 /* Numbers.storyboard in Resources */,
 				764D88152A6F90D900A084A5 /* Assets.xcassets in Resources */,
+				76F6E9C92A72928700EADE99 /* Validation.storyboard in Resources */,
 				764D88132A6F90D800A084A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +191,8 @@
 				764D88102A6F90D800A084A5 /* ViewController.swift in Sources */,
 				764D88292A6FAC7200A084A5 /* NumbersSwiftUIContainerVC.swift in Sources */,
 				764D88252A6F920000A084A5 /* NumbersViewController.swift in Sources */,
+				76F6E9CB2A72930B00EADE99 /* ValidationViewController.swift in Sources */,
+				76F6E9CF2A729E4400EADE99 /* ValidationVM.swift in Sources */,
 				764D882B2A6FB24200A084A5 /* NumbersVM.swift in Sources */,
 				764D88272A6F99BB00A084A5 /* UIViewController+Ext.swift in Sources */,
 				764D880C2A6F90D800A084A5 /* AppDelegate.swift in Sources */,

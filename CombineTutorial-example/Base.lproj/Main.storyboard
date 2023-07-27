@@ -38,7 +38,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEn-hl-Xmg">
                                                         <rect key="frame" x="0.0" y="108.66666666666669" width="353" height="34.333333333333343"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="NavToValidation"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJt-Sp-fN7">
                                                         <rect key="frame" x="0.0" y="163" width="353" height="34.333333333333343"/>
@@ -142,6 +142,7 @@
                     <connections>
                         <outlet property="navToNumbersBtn" destination="8UY-DH-ST9" id="ZBk-oe-SeZ"/>
                         <outlet property="navToNumbersSwiftUIButton" destination="dAP-Ww-cfI" id="bXQ-iI-de6"/>
+                        <outlet property="navToValidationBtn" destination="aEn-hl-Xmg" id="fYy-vv-MS1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

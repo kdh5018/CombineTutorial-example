@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var navToNumbersSwiftUIButton: UIButton!
     
+    @IBOutlet weak var navToValidationBtn: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,17 @@ class ViewController: UIViewController {
                 //MARK: - Numbers로 화면 이동
                 let numbersVC = NumbersViewController.instantiate("Numbers")
                 self.navigationController?.pushViewController(numbersVC, animated: true)
+            })
+            .store(in: &subscriptions)
+        
+        navToValidationBtn
+            .tapPublisher
+            .sink(receiveValue: {
+                print(#fileID, #function, #line, "- <#comment#>")
+                
+                //MARK: - Numbers로 화면 이동
+                let validationVC = ValidationViewController.instantiate("Validation")
+                self.navigationController?.pushViewController(validationVC, animated: true)
             })
             .store(in: &subscriptions)
         

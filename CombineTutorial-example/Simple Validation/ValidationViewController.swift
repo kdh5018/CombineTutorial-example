@@ -17,14 +17,14 @@ import CombineCocoa
 class ValidationViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var userNameLabel: UILabel!
-    
     @IBOutlet weak var passwordLabel: UILabel!
     
     @IBOutlet weak var completeButton: UIButton!
+    
+    var minimalTextLength = 5
     
     var viewModel: ValidationVM = ValidationVM()
     
@@ -34,10 +34,48 @@ class ValidationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userNameLabel.text = "Username has to be at least 5 characters"
-        passwordLabel.text = "Password has to be at least 5 characters"
+        userNameLabel.text = "Username has to be at least \(self.minimalTextLength) characters"
+        passwordLabel.text = "Password has to be at least \(self.minimalTextLength) characters"
         
         completeButton.isEnabled = false
+        
+        let usernameValid = userNameTextField.publisher(for: \.text)
+            .map{ ( $0 ?? "").count >= minimalTextLength }
+            .share()
+        
+        let passwordValid = passwordTextField.publisher(for: \.text)
+            .map{ ( $0 ?? "").count >= minimalTextLength }
+            .share()
+        
+        let everythingValid = Publishers.CombineLatest(usernameValid, passwordValid)
+            .map{ $0 && $1 }
+            .share()
+        
+        usernameValid
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.isEnabled, on: passwordTextField)
+            .store(in: &subscriptions)
+        
+        usernameValid
+            .receive(on: DispatchQueue.main)
+            .map { !$0 }
+            .assign(to: \.isHidden, on: userNameLabel)
+            .store(in: &subscriptions)
+        
+        passwordValid
+            .receive(on: DispatchQueue.main)
+            .map { !$0 }
+            .assign(to: \.isHidden, on: passwordLabel)
+            .store(in: &subscriptions)
+
+        everythingValid
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.isEnabled, on: completeButton)
+            .store(in: &subscriptions)
+
+        doSomethingOutlet.publisher(for: .touchUpInside)
+            .sink { [weak self] _ in self?.showAlert() }
+            .store(in: &subscriptions)
         
     }
     
